@@ -18,15 +18,13 @@ use CodeIgniter\Config\BaseService;
  * see the core Services file at system/Config/Services.php.
  */
 class Services extends BaseService
-{
-    /*
-     * public static function example($getShared = true)
-     * {
-     *     if ($getShared) {
-     *         return static::getSharedInstance('example');
-     *     }
-     *
-     *     return new \CodeIgniter\Example();
-     * }
-     */
+{    
+    public static function eloquent($getShared = true)
+    {
+        if ($getShared)
+        {
+            return static::getSharedInstance('eloquent');
+        }
+        return new \Config\Eloquent();
+    }
 }
